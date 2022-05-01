@@ -6,7 +6,13 @@ const resultado = document.querySelector('.resultado');
 const containerTable = document.querySelector('.containerTable');
 const container = document.querySelector('.container');
 
-
+// seletores tr
+const magreza = document.querySelector('.magreza');
+const normal = document.querySelector('.normal');
+const sobrepeso = document.querySelector('.sobrepeso');
+const obesidade = document.querySelector('.obesidade');
+const obesidadeGrave = document.querySelector('.obesidadeGrave');
+const trs = document.querySelectorAll('tr');
 
 //funçoes
 function calcularImc(altura, peso) {
@@ -14,18 +20,37 @@ function calcularImc(altura, peso) {
   return imc;
 }
 function mostrarResultado() {
-  let paragrafoResultado = document.createElement('p');
+  limpaMarcador();
   let imc = calcularImc(inputAltura.value, inputPeso.value);
-  paragrafoResultado.innerHTML = `Seu IMC é de: ${imc.toFixed(2)}`;
-  resultado.appendChild(paragrafoResultado);
+  resultado.innerHTML = `<p>Seu IMC é de: ${imc.toFixed(2)}</p>`;
   limparInput();
   containerTable.setAttribute('style', 'display: block')
-  container.setAttribute('style', 'height:60%');
+  container.setAttribute('style', 'height:65%');
+  if (imc < 18.5) {
+    magreza.setAttribute('style', 'background-color: RGBA( 255, 255, 224, 1 );')
+  } else if (imc <= 24.9) {
+    normal.setAttribute('style', 'background-color: RGBA( 50, 205, 50, 0.4 );')
+  } else if (imc <= 29.9) {
+    sobrepeso.setAttribute('style', 'background-color: RGBA( 250, 128, 114,0.4 );')
+  }
+  else if (imc <= 39.9) {
+    obesidade.setAttribute('style', 'background-color: RGBA( 255, 165, 0, 1 );')
+  } else if (imc >= 40) {
+    obesidadeGrave.setAttribute('style', 'background-color: RGBA( 255, 0, 0, 1 );')
+  }
+
 }
 function limparInput() {
   inputAltura.value = '';
   inputPeso.value = '';
-    inputPeso.focus();
+  inputPeso.focus();
+}
+function limpaMarcador() {
+  for (let i = 1; i < trs.length; i++) {
+    if (trs[i].style.backgroundColor !== 'none') {
+      trs[i].style.backgroundColor = '';
+    }
+  }
 }
 
 //escutas
