@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <title>IMC - RAFAEL OLIVEIRA</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="tituloImc">Calculadora IMC</h1>
+    <label for="inputPeso">Informe seu peso (KG):</label>
+    <input type="text" name="" id="inputPeso" class="">
+    <label for="inputPeso">Informe sua altura: (Em Metros)</label>
+    <input type="text" name="" id="inputAltura" class="">
+    <button type="submit" id="btnCalc">Calcular</button>
+    <div class="resultado">
+    </div>
+    <div class="containerTable">
+      <table>
+        <thead>
+          <tr>
+            <th>IMC</th>
+            <th>CLASSIFICAÇÃO</th>
+            <th>OBESIDADE(GRAU)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MENOR QUE 18.5</td>
+            <td> MAGREZA </td>
+            <td> 0 </td>
+          </tr>
+          <tr>
+            <td>ENTRE 18.5 E 24.9</td>
+            <td> NORMAL </td>
+            <td> 0 </td>
+          </tr>
+          <tr>
+            <td>ENTRE 25.0 E 29.9</td>
+            <td> SOBREPESO </td>
+            <td> I </td>
+          </tr>
+          <tr>
+            <td>ENTRE 30.0 E 39.9</td>
+            <td> OBESIDADE </td>
+            <td> II </td>
+          </tr>
+          <tr>
+            <td>MAIOR QUE 40.0</td>
+            <td> OBESIDADE GRAVE </td>
+            <td> III </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer class="rodape">
+    <p>Desenvolvido por Rafael Oliveira - Para estudo</p>
+  </footer>
+  <script src="./assets/js/script.js"> </script>
+</body>
+
+</html>
