@@ -7,6 +7,7 @@ body {
   background-image: url(../images/papel-de-parede-adesivo-frutas-infantl-papel-de-parede-intantil.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .container {
@@ -36,6 +37,7 @@ input {
   border-radius: 5px;
   border-style: none;
   margin-bottom: 5px;
+  color: black;
 }
 
 button {
@@ -68,6 +70,7 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
 }
+
 
 td {
   border-width: 1px;
