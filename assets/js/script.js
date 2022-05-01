@@ -25,6 +25,7 @@ function mostrarResultado() {
 function limparInput() {
   inputAltura.value = '';
   inputPeso.value = '';
+    inputPeso.focus();
 }
 
 //escutas
