@@ -28,7 +28,7 @@ function mostrarResultado() {
   container.setAttribute('style', 'height:65%');
   if (imc < 18.5) {
     magreza.setAttribute('style', 'background-color: RGBA( 255, 255, 224, 1 );')
-  } else if (imc <= 24.9) {
+  } else if (imc < 25.0) {
     normal.setAttribute('style', 'background-color: RGBA( 50, 205, 50, 0.4 );')
   } else if (imc <= 29.9) {
     sobrepeso.setAttribute('style', 'background-color: RGBA( 250, 128, 114,0.4 );')
@@ -38,8 +38,8 @@ function mostrarResultado() {
   } else if (imc >= 40) {
     obesidadeGrave.setAttribute('style', 'background-color: RGBA( 255, 0, 0, 1 );')
   }
-
 }
+
 function limparInput() {
   inputAltura.value = '';
   inputPeso.value = '';
