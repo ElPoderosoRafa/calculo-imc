@@ -30,10 +30,10 @@ function mostrarResultado() {
     magreza.setAttribute('style', 'background-color: RGBA( 255, 255, 224, 1 );')
   } else if (imc < 25.0) {
     normal.setAttribute('style', 'background-color: RGBA( 50, 205, 50, 0.4 );')
-  } else if (imc <= 29.9) {
+  } else if (imc < 30.0) {
     sobrepeso.setAttribute('style', 'background-color: RGBA( 250, 128, 114,0.4 );')
   }
-  else if (imc <= 39.9) {
+  else if (imc < 40.0) {
     obesidade.setAttribute('style', 'background-color: RGBA( 255, 165, 0, 1 );')
   } else if (imc >= 40) {
     obesidadeGrave.setAttribute('style', 'background-color: RGBA( 255, 0, 0, 1 );')
